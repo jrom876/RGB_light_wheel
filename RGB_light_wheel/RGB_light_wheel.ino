@@ -29,7 +29,6 @@
 
 // SETUP YOUR OUTPUT PIN AND NUMBER OF PIXELS
 #define PIN 6
-#define BUZZER 7
 #define NUM_PIXELS  6
 #define vel 1 // Velocity in milliseconds
 #define uvel 5 // delay in microseconds
@@ -37,7 +36,6 @@
 Adafruit_NeoPixel strip = Adafruit_NeoPixel(NUM_PIXELS, PIN, NEO_RGB + NEO_KHZ400);
 
 void setup() {
-  pinMode(BUZZER, OUTPUT); // 7
   strip.begin();
   clearStrip(); // Initialize all pixels to 'off'
   delay(1000);
