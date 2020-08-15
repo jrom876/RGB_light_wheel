@@ -13,14 +13,17 @@
   * the test bench and production environments. 
   * 
   * So I modified masteruan's code by adding a simple 6-bit attenuator 
-  * to the color function call. 
+  * to the color function call, and a much shorter delay for the brand
+  * of LED I am using.
   * 
   * I also hard-coded options for evenly-spaced color transitions 
-  * and wrote a for loop to iterate through them.
+  * and wrote for loops to iterate through them.
+  *
+  * Lastly, I wrote two white light dimmer functions just for fun.
   * 
   * @credits
   * Thanks to masteruan at instructables.com and to the folks at 
-  * Adafruit for graciously contributing the Adafruit_NeoPixel library. 
+  * Adafruit for contributing the Adafruit_NeoPixel library. 
   * 
   * https://www.instructables.com/id/Multicolor-Knight-Rider-with-RGB-PL9823-LED-Arduin/
   * https://github.com/adafruit/Adafruit_NeoPixel
@@ -49,7 +52,9 @@ void loop() {
 //    delay(200);
   }
 }
-
+///////////////////////////////////////
+// Retreived from: 
+// https://www.instructables.com/id/Multicolor-Knight-Rider-with-RGB-PL9823-LED-Arduin/
 // Cycles - one cycle is scanning through all pixels left then right (or right then left)
 // Speed - how fast one cycle is (32 with 16 pixels is default knightRider speed)
 // Width - how wide the trail effect is on the fading out LEDs.  The original display used
@@ -69,7 +74,7 @@ void knightRider(uint16_t cycles, uint16_t speed, uint8_t width, uint32_t color)
       }
       strip.show();
 //      delay(speed);
-      delayMicroseconds(speed);
+      delayMicroseconds(speed); // this is the only part I added to knightRider()
     }
     for (int count = NUM_PIXELS-1; count>=0; count--) {
       strip.setPixelColor(count, color);
@@ -80,7 +85,7 @@ void knightRider(uint16_t cycles, uint16_t speed, uint8_t width, uint32_t color)
       }
       strip.show();
 //      delay(speed);
-      delayMicroseconds(speed);
+      delayMicroseconds(speed); // this is the only part I added to knightRider()
     }
   }
 }
@@ -94,6 +99,8 @@ void clearStrip() {
 uint32_t dimColor(uint32_t color, uint8_t width) {
    return (((color&0xFF0000)/width)&0xFF0000) + (((color&0x00FF00)/width)&0x00FF00) + (((color&0x0000FF)/width)&0x0000FF);
 }
+
+//////////////////////////////
 
 uint32_t setWhite(byte tone) {
   return strip.Color(tone, tone, tone);
