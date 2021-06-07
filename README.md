@@ -1,11 +1,15 @@
+ light_wheel.ino
+ 
  RGB_light_wheel.ino
+ 
+ light_wheel.ino: multiple color spectrum generator algorithms for the PL9823 Programmable RGB LED
 
- A dimmable color spectrum generator for 
- the PL9823 Programmable RGB LED
+ RGB_light_wheel.ino: A dimmable color spectrum generator for the PL9823 Programmable RGB LED
+ 
+Jake Romero from Creative Engineering Solutions
 
 CES_LLC, August 2020
 
-Jake Romero from Creative Engineering Solutions here: 
  
 When I first tinkered with the Knight Rider instructables project 
 for the PL9823 Programmable RGB LEDs (see below), I found that 
