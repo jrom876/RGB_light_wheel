@@ -3,14 +3,12 @@ light_wheel.ino
 RGB_light_wheel.ino 
 
 
-Jake Romero, Creative Engineering Solutions
-
-CES_LLC, August 2020
+Jake Romero, Creative Engineering Solutions, CES_LLC, August 2020
 
 
-light_wheel.ino: multiple color spectrum generator algorithms for the PL9823 Programmable RGB LED
+  light_wheel.ino: multiple color spectrum generator algorithms for the PL9823 Programmable RGB LED
 
-RGB_light_wheel.ino: A dimmable color spectrum generator for the PL9823 Programmable RGB LED
+  RGB_light_wheel.ino: A dimmable color spectrum generator for the PL9823 Programmable RGB LED
 
 
 These code snippets were written to help programmers utilize these LEDs.
