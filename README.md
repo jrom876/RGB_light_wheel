@@ -10,10 +10,6 @@ CES_LLC, August 2020
 
 light_wheel.ino: multiple color spectrum generator algorithms for the PL9823 Programmable RGB LED
 
-This file contains various color spectrum generators with attenuators and other options.
-
-
-
 RGB_light_wheel.ino: A dimmable color spectrum generator for the PL9823 Programmable RGB LED
 
 
