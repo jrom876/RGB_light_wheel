@@ -1,5 +1,5 @@
 
-// https://arduino.stackexchange.com/questions/35734/better-cycling-through-the-rgb-colors
+
 #include <Adafruit_NeoPixel.h>
 
 // SETUP YOUR OUTPUT PIN AND NUMBER OF PIXELS
